@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3f8d21e0-be1e-494e-9b6a-c07b45334766}</ProjectGuid>
+    <RootNamespace>OpenGoldenSun</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\libsdl_vs\include;$(SolutionDir)\OpenGoldenSun\game\src;$(SolutionDir)\OpenGoldenSun\libs;$(SolutionDir)\OpenGoldenSun\gse\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\libsdl_vs\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\libsdl_vs\include;$(SolutionDir)\OpenGoldenSun\game\src;$(SolutionDir)\OpenGoldenSun\libs;$(SolutionDir)\OpenGoldenSun\gse\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\libsdl_vs\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;GSE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\OpenGoldenSun\libs\tmxlite\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;libtmxlite-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\OpenGoldenSun\libs\tmxlite\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;libtmxlite-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="game\main.cpp" />
+    <ClCompile Include="game\src\Game.cpp" />
+    <ClCompile Include="gse\include\gse\ecs\components\MovableObjectComponent.cpp" />
+    <ClCompile Include="gse\src\ecs\components\Component.cpp" />
+    <ClCompile Include="gse\src\ecs\entities\Entity.cpp" />
+    <ClCompile Include="gse\src\ecs\entities\EntityManager.cpp" />
+    <ClCompile Include="gse\src\ecs\Scene.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\AnimationSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\CameraSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\CollisionSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\NPCSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\PlayerSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\RenderSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\System.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\SystemManager.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\TileEventSystem.cpp" />
+    <ClCompile Include="gse\src\ecs\systems\TransformSystem.cpp" />
+    <ClCompile Include="gse\src\events\PlayerInput.cpp" />
+    <ClCompile Include="gse\src\resources\SpriteSheet.cpp" />
+    <ClCompile Include="gse\src\utilities\InputFile.cpp" />
+    <ClCompile Include="gse\src\utilities\Shapes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game\src\Game.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\AnimationComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\CameraComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\CollisionComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\Component.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\ComponentPool.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\DebugComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\NPCComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\PlayerComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\RenderComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\SpriteComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\TileEventComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\TransformComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\components\VelocityComponent.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\entities\Entity.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\Scene.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\AnimationSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\CameraSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\CollisionSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\NPCSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\PlayerSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\RenderSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\System.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\TileEventSystem.hpp" />
+    <ClInclude Include="gse\include\gse\ecs\systems\TransformSystem.hpp" />
+    <ClInclude Include="gse\include\gse\events\Event.hpp" />
+    <ClInclude Include="gse\include\gse\events\EventBus.hpp" />
+    <ClInclude Include="gse\include\gse\events\PlayerInput.hpp" />
+    <ClInclude Include="gse\include\resources\Resource.hpp" />
+    <ClInclude Include="gse\include\resources\SpriteSheet.hpp" />
+    <ClInclude Include="gse\include\utilities\InputFile.hpp" />
+    <ClInclude Include="gse\include\utilities\Shapes.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gse\include\gse\ecs\entities\Entity.inl" />
+    <None Include="gse\include\gse\ecs\entities\EntityManager.inl" />
+    <None Include="gse\include\gse\ecs\Scene.inl" />
+    <None Include="gse\include\gse\ecs\systems\System.inl" />
+    <None Include="gse\include\gse\ecs\systems\SystemManager.inl" />
+    <None Include="gse\include\gse\events\EventBus.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
